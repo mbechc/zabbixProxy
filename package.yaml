@@ -1,0 +1,20 @@
+descriptor-schema-version: "2.7"
+info:
+  name: zabbixProxy
+  version: "3.18-5.0.46"
+  description: Zabbix Proxy for ARM64 on Alpine 3.18 with SQLite3
+
+app:
+  cpuarch: aarch64
+  type: docker
+  resources:
+      profile: exclusive
+      disk: 1024
+  startup:
+    rootfs: zabbix-proxy-arm64.tar
+    target:
+    - /opt/zabbix/sbin/zabbix_proxy
+    - -f
+    - -c
+    - /opt/zabbix/etc/zabbix_proxy.conf
+    workdir: /
