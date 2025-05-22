@@ -26,5 +26,13 @@ while IFS= read -r line; do
   esac
 done < "$INPUT_FILE"
 
-# Start Zabbix proxy
-exec su-exec zabbix /opt/zabbix/sbin/zabbix_proxy -f
+# Ensure database path exists and is writable
+mkdir -p /var/lib/zabbix
+chown -R zabbix:zabbix /var/lib/zabbix
+
+while true; do
+  echo "[INFO] Starting Zabbix Proxy as 'zabbix'..."
+  su-exec zabbix /opt/zabbix/sbin/zabbix_proxy -f -c /etc/zabbix/zabbix_proxy.conf
+  echo "[WARN] zabbix_proxy exited at $(date). Restarting in 5s..."
+  sleep 5
+done
