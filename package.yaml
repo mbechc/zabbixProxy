@@ -8,13 +8,11 @@ app:
   cpuarch: aarch64
   type: docker
   resources:
-      profile: exclusive
-      disk: 1024
+    profile: exclusive
+    disk: 1024
   startup:
     rootfs: zabbix-proxy-arm64.tar
     target:
-    - /opt/zabbix/sbin/zabbix_proxy
-    - -f
-    - -c
-    - /opt/zabbix/etc/zabbix_proxy.conf
+      - /start.sh
     workdir: /
+

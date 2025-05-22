@@ -1,0 +1,6 @@
+{
+    "resources": {
+        "profile": "exclusive",
+        "network": [{"interface-name": "eth0", "network-name": "mgmt-bridge300"}]
+    }
+}

@@ -44,11 +44,9 @@ RUN apk add --no-cache \
     shadow \
     gettext
 
-# Set fping to setuid for ICMP support
+COPY start.sh /start.sh 
 RUN chmod u+s /usr/sbin/fping
-
-# Add entrypoint logic and templates
-COPY --from=builder /opt/zabbix /opt/zabbix
-COPY zabbix_proxy.conf /opt/zabbix/etc/zabbix_proxy.conf
+RUN chmod +x /start.sh
 
 # No CMD or ENTRYPOINT here – it's handled by package.yaml or Cisco run-opts
+# COPY --from=builder /opt/zabbix /opt/zabbix
