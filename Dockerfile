@@ -1,3 +1,4 @@
+# --- Stage 1: Build ---
 FROM alpine:3.18 AS builder
 
 RUN apk add --no-cache \
@@ -30,6 +31,7 @@ RUN ./configure \
     --prefix=/opt/zabbix && \
     make && make install
 
+# --- Stage 2: Runtime ---
 FROM alpine:3.18
 
 RUN apk add --no-cache \
@@ -42,9 +44,13 @@ RUN apk add --no-cache \
     bash \
     fping \
     shadow \
+    su-exec \
     gettext
 
+COPY --from=builder /opt/zabbix /opt/zabbix
 COPY start.sh /start.sh 
+RUN addgroup -S zabbix && adduser -S -G zabbix zabbix
+RUN mkdir -p /etc/zabbix /var/log/zabbix && chown -R zabbix:zabbix /etc/zabbix /var/log/zabbix
 RUN chmod u+s /usr/sbin/fping
 RUN chmod +x /start.sh
 

@@ -1,15 +1,14 @@
 #!/bin/sh
 
-CONFIG_SRC="/iox_data/package_config.ini"
+INPUT_FILE="/iox_data/package_config.ini"
 inside=0
 outfile=""
 
-# Extract embedded config files
 while IFS= read -r line; do
   case "$line" in
     @@@FILE:*)
       outfile=$(echo "$line" | cut -d':' -f2-)
-      mkdir -p "$(dirname "$outfile")"
+      mkdir -p "$(dirname "$outfile")"  # ✅ ensures /etc/zabbix exists
       exec 3> "$outfile"
       inside=1
       ;;
@@ -25,8 +24,7 @@ while IFS= read -r line; do
       [ "$inside" -eq 1 ] && echo "$line" >&3
       ;;
   esac
-done < "$CONFIG_SRC"
+done < "$INPUT_FILE"
 
-# Start Zabbix proxy in foreground
-exec /usr/sbin/zabbix_proxy -f
-
+# Start Zabbix proxy
+exec su-exec zabbix /opt/zabbix/sbin/zabbix_proxy -f

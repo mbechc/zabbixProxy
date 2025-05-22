@@ -1,6 +1,25 @@
 {
-    "resources": {
-        "profile": "exclusive",
-        "network": [{"interface-name": "eth0", "network-name": "mgmt-bridge300"}]
-    }
+  "resources": {
+    "profile": "exclusive",
+    "network": [
+      {
+        "interface-name": "eth0",
+        "ipv4": {
+          "default": true,
+          "mode": "static",
+          "ip": "192.168.88.230",
+          "prefix": "24",
+          "gateway": "192.168.88.1",
+          "dns": "1.1.1.1"
+        },
+        "mirroring": "no",
+        "network-type": "vlan",
+        "network-info": {
+          "network-name": "mgmt-bridge300",
+          "vlan-id": "100"
+        }
+      }
+    ]
+  }
 }
+
