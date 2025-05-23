@@ -61,6 +61,20 @@ StatsAllowedIP=127.0.0.1
 @@@END
 ```
 
+## Start the Application
+
+<img width="390" alt="image" src="https://github.com/user-attachments/assets/a8834fb4-0c21-42f7-8040-aa31f42f1bbe" />
+
+Want to see how the application runs, connect to Switch CLI and issue 
+```
+app-hosting connect appid zabbixProxy session
+```
+
+Logs can be found in GUI by clicking Manage on the zabbixProxy Application and go to tab "Logs". The logs will be the output of the Zabbix Proxy console logging.
+
+
+
+
 
 
 
