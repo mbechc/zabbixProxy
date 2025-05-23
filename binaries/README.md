@@ -26,9 +26,13 @@ Open https://<SWITCHIP>/webui/#/ioxmain
 ## Activate Application - configure Application networking
 
 Click Activate and Press "Add App Network Interface
+
 <img width="548" alt="image" src="https://github.com/user-attachments/assets/bc53d2f3-2233-4e99-b173-26bc5d9a2411" />
+
 Press OK - and Click "Interface Setting"
+
 <img width="484" alt="image" src="https://github.com/user-attachments/assets/fe10e1c6-9912-4029-bc9c-964ddb6d1621" />
+
 Click Add - Then press "Activate App"
 
 ## Modify zabbix_proxy.conf and insert into App-Config
