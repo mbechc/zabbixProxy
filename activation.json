@@ -7,16 +7,15 @@
         "ipv4": {
           "default": true,
           "mode": "static",
-          "ip": "192.168.88.230",
+          "ip": "10.56.129.1",
           "prefix": "24",
-          "gateway": "192.168.88.1",
-          "dns": "1.1.1.1"
+          "gateway": "10.56.129.254"
         },
         "mirroring": "no",
         "network-type": "vlan",
         "network-info": {
           "network-name": "mgmt-bridge300",
-          "vlan-id": "100"
+          "vlan-id": "52"
         }
       }
     ]
