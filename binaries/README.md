@@ -10,14 +10,17 @@ no app-hosting signed-verification
 restconf
 do write
 ```
+
 ## Launch Switch IOX GUI
 
 Open https://<SWITCHIP>/webui/#/ioxmain
 
 **Add New**
+
 <img width="696" alt="image" src="https://github.com/user-attachments/assets/65334cf4-7111-4b9a-9b98-9f3fde8f3633" />
 
 **Deploy package.tar**
+
 <img width="363" alt="image" src="https://github.com/user-attachments/assets/f94d4eea-6517-46b3-8cd6-bdc1d1472f31" />
 
 ## Activate Application - configure Application networking
