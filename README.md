@@ -9,7 +9,19 @@ Use build.sh for necessary build commands, this should only be necessary if Zabb
 ## Install Zabbix Proxy onto IE3400
 Use install.sh for necessary commands. Before Install, please edit zabbixProxy-package_config.ini for changes to zabbix_proxy.conf
 
-## ioxclient
+## Prerequisites
+### ioxclient
 install.sh uses ioxclient to install and configure the application onto IE3400 IOx. Latest ioxclient can be downloaded from Cisco Devnet
 https://developer.cisco.com/docs/iox/iox-resource-downloads/
+### Switch Config
+IOx needs to be activated in the switch and http server has to be enabled for ioxclient to be able to install IOx containers.
+```
+conf t
+ip http server
+ip http secure-server
+iox
+no app-hosting signed-verification
+restconf
+do write
+```
 
