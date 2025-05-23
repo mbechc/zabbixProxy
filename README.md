@@ -3,7 +3,7 @@ This Repository aims to be a starting point for those who wants to run Zabbix Pr
 What is Zabbix? Please visit https://www.zabbix.dk
 
 ## Quick Launch
-You don't have to build or use CLI to install and run a Zabbix Proxy on the Switch, try the [manual install](https://github.com/mbechc/zabbixProxy/edit/master/README.md#:~:text=binaries-,README,-.md) and pre-built image. Zabbix Proxy is built with the parameters found in Dockerfile.
+You don't have to build or use CLI to install and run a Zabbix Proxy on the Switch, try the [manual install](binaries/README.md) and pre-built image. Zabbix Proxy is built with the parameters found in Dockerfile.
 
 
 
