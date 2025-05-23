@@ -1,5 +1,6 @@
 # Manual install of package.tar using IE3400 GUI
 ## Prepare Switch
+
 ```
 conf t
 ip http server
@@ -10,7 +11,9 @@ restconf
 do write
 ```
 ## Launch Switch IOX GUI
+
 Open https://<SWITCHIP>/webui/#/ioxmain
+
 **Add New**
 <img width="696" alt="image" src="https://github.com/user-attachments/assets/65334cf4-7111-4b9a-9b98-9f3fde8f3633" />
 
@@ -18,6 +21,7 @@ Open https://<SWITCHIP>/webui/#/ioxmain
 <img width="363" alt="image" src="https://github.com/user-attachments/assets/f94d4eea-6517-46b3-8cd6-bdc1d1472f31" />
 
 ## Activate Application - configure Application networking
+
 Click Activate and Press "Add App Network Interface
 <img width="548" alt="image" src="https://github.com/user-attachments/assets/bc53d2f3-2233-4e99-b173-26bc5d9a2411" />
 Press OK - and Click "Interface Setting"
@@ -25,6 +29,7 @@ Press OK - and Click "Interface Setting"
 Click Add - Then press "Activate App"
 
 ## Modify zabbix_proxy.conf and insert into App-Config
+
 The container will read App-Config at start and convert it into /etc/zabbix/zabbix_proxy.conf, then start Zabbix Proxy
 Click the tab "App-Config" - Fill in the zabbix_proxy.conf - please include the header and footer
 ```
