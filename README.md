@@ -2,6 +2,11 @@
 This Repository aims to be a starting point for those who wants to run Zabbix Proxy on [Cisco IE3400](https://www.cisco.com/c/en/us/products/switches/industrial-ethernet-switches/catalyst-IE3000-rugged-switches.html?dtid=odicdc000509) IOx container.
 What is Zabbix? Please visit https://www.zabbix.dk
 
+## Quick Launch
+You don't have to build or use CLI to install and run a Zabbix Proxy on the Switch, try the [manual install](https://github.com/mbechc/zabbixProxy/edit/master/README.md#:~:text=binaries-,README,-.md) and pre-built image. Zabbix Proxy is built with the parameters found in Dockerfile.
+
+
+
 ## Build new Zabbix Proxy for Cisco IE3400 
 requires ARM64 platform or knowledge on how to cross-compile. I have done all compile on MacBook M-series.
 Use build.sh for necessary build commands, this should only be necessary if Zabbix Proxy needs support for more Zabbix Features.  
