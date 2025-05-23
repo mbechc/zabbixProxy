@@ -1,5 +1,5 @@
 # zabbixProxy
-This Repository aims to be a starting point for those who wants to run Zabbix Proxy on Cisco IE3400 IOx container.
+This Repository aims to be a starting point for those who wants to run Zabbix Proxy on [Cisco IE3400](https://www.cisco.com/c/en/us/products/switches/industrial-ethernet-switches/catalyst-IE3000-rugged-switches.html?dtid=odicdc000509) IOx container.
 What is Zabbix? Please visit https://www.zabbix.dk
 
 ## Build new Zabbix Proxy for Cisco IE3400 
